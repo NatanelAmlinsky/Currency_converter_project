@@ -32,7 +32,7 @@ def checkifvalid():
                                 # So, whenever the userInputs() function is called, it will ensure that valid input is received before continuing
 
     except:
-        print("You have to enter only numbers (1 OR 2 OR 3) not an text!")
+        print("Some of data that you entered are illegal, please try again from the beginning. (1 OR 2 OR 3)")
         checkifvalid()
 
 

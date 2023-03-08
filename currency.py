@@ -27,10 +27,13 @@ class EUR:  # Shekel to EUR
         return ilstoeur
 
 
-# class Results:
-#     def __init__(self, amount, source_currency, target_currency):
-#         self.amount = amount
-#         self.source_currency = source_currency
-#         self.target_currency = target_currency
-#         self.flow = f"{source_currency} to {target_currency}"
-#
+class Results:
+    # Documenting the number that converted from source currency to target currency
+    def __init__(self, convertedNum, convertedFrom, comvertedTo):
+        self.convertedNum = convertedNum
+        self.convertedFrom = convertedFrom
+        self.comvertedTo = comvertedTo
+        result = str(convertedNum) + " To " + comvertedTo
+        return result
+
+
