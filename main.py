@@ -52,12 +52,16 @@ def userInputs(user_input):
                                         "\n3. ILS to EUR")
         user_input = int(input("Enter your choice: "))
 
-    if user_input == 1:  # Dollar to Shekel
+    if user_input == 1:  # USD to ILS
         num = float(input("Please enter an amount of USD Dollars to convert to ILS: "))
         num = checkIfNegative(num)
         converter = currency.Ils()  # create an instance of the Usd class
         ils = converter.calculate(num)  # Entering the Usd class and doing the calculation
-        result_list.append(str(f'{ils:.2f}') + "(USD to ILS)")  # Adding user convert requests to list
+
+        result = currency.Results(ils, "USD To ILS")
+        result = result.getresult()
+
+        result_list.append(result)  # Adding user convert requests to list
 
         print("The result of converting ", num, " USD to ILS is: ", f'{ils:.2f}',
               "\n Would you like to convert more?"
@@ -66,12 +70,14 @@ def userInputs(user_input):
         user_input = input("Enter your choice: ")
         yORn(user_input)
 
-    if user_input == 2:  # Shekel to Dollar
+    if user_input == 2:  # ILS to USD
         num = float(input("Please enter an amount ILS to convert to Dollars: "))
         num = checkIfNegative(num)
         converter = currency.Usd()  # create an instance of the USD class
         usd = converter.calculate(num)  # Entering the ILS class and doing the calculation
-        result_list.append(str(f'{usd:.2f}') + "(ILS to USD)")  # Adding user convert results to list
+        result = currency.Results(usd, "ILS To USD")
+        result = result.getresult()
+        result_list.append(result)  # Adding user convert requests to list
         print("The result of converting ", num, " ILS to USD is: ", f'{usd:.2f}',
               "\n Would you like to convert more?"
               "\n Enter Y to continue, Or N to finish: ")
@@ -79,12 +85,14 @@ def userInputs(user_input):
         user_input = input("Enter your choice: ")
         yORn(user_input)
 
-    if user_input == 3:  # Shekel to Dollar
+    if user_input == 3:  # ILS to EUR
         num = float(input("Please enter an amount of ILS to convert to EUR: "))
         num = checkIfNegative(num)
         converter = currency.EUR()  # create an instance of the EUR class
         eur = converter.calculate(num)  # Entering the ILS class and doing the calculation
-        result_list.append(str(f'{eur:.2f}') + "(ILS to EUR)")  # Adding user convert results to list
+        result = currency.Results(eur, "ILS To EUR")
+        result = result.getresult()
+        result_list.append(result)  # Adding user convert requests to list
 
         print("The result of converting ", num, " ILS to EUR is: ", f'{eur:.2f}',
               "\n Would you like to convert more?"

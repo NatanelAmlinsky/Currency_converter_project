@@ -29,11 +29,21 @@ class EUR:  # Shekel to EUR
 
 class Results:
     # Documenting the number that converted from source currency to target currency
-    def __init__(self, convertedNum, convertedFrom, comvertedTo):
+
+    def __init__(self, convertedNum, converstion_flow):
         self.convertedNum = convertedNum
-        self.convertedFrom = convertedFrom
-        self.comvertedTo = comvertedTo
-        result = str(convertedNum) + " To " + comvertedTo
+        self.converstion_flow = converstion_flow
+
+    def getresult(self):
+        result = f"{self.convertedNum}, {self.converstion_flow}"
         return result
+
+
+
+
+
+
+
+
 
 
