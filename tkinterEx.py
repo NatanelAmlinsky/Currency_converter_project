@@ -14,6 +14,7 @@ with open("C:\\Users\\natan\\Desktop\\python_tests\\results.txt", "r") as file:
 # Insert the contents of the file into the Text widget
 text.insert(tk.END, contents)
 
+
 # Pack the Text widget into the window and show it
 text.pack()
 window.mainloop()
