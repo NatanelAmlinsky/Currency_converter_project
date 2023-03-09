@@ -1,3 +1,4 @@
+
 class Ils:  # Dollar to Shekel
 
     def get_value(self):
