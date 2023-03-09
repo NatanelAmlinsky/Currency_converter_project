@@ -1,5 +1,5 @@
 import currency
-
+import os
 
 def yORn(user_input):  # checking if the user chose Y to continue to covert Or N to finish.
     count = 0
@@ -17,9 +17,13 @@ def yORn(user_input):  # checking if the user chose Y to continue to covert Or N
             print("Thanks for using our currency converter!"
                   "\nHere is your converts currency history: ", result_list)
             count += 1
+
         if count == 0:
             user_input = input("Enter Y to continue, Or N to finish: "
                                 "\nEnter your choice: ")
+
+
+
 def checkifvalid():
 
     try:
@@ -108,6 +112,10 @@ checkifvalid()
 
 my_file = open('/Users/natan/Desktop/python_tests/results.txt', 'w', encoding='utf-8')
 document = my_file.write(str(result_list))
+result_file = 'C:\\Users\\natan\\Desktop\\python_tests\\results.txt'
+os.startfile(result_file)
+
+
 
 
 
